@@ -9,7 +9,7 @@
 	<key>CFBundleName</key>
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.${PRODUCT_NAME:identifier}</string>
+	<string>com.rectalogic.${PRODUCT_NAME:identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
@@ -22,31 +22,13 @@
 	<array>
 		<dict>
 			<key>HGSExtensionClass</key>
-			<string>iTunesNotifierSource</string>
+			<string>iTunesNotifierService</string>
 			<key>HGSExtensionIdentifier</key>
-			<string>com.yourcompany.source.iTunesNotifier</string>
+			<string>com.rectalogic.service.${PRODUCT_NAME:identifier}</string>
 			<key>HGSExtensionPoint</key>
-			<string>HGSSourcesExtensionPoint</string>
+			<string>HGSServicesExtensionPoint</string>
 			<key>HGSExtensionUserVisibleName</key>
-			<string>iTunesNotifier Source</string>
-			<key>HGSSearchSourcePivotableTypes</key>
-			<array/>
-		</dict>
-		<dict>
-			<key>HGSExtensionClass</key>
-			<string>iTunesNotifierAction</string>
-			<key>HGSExtensionPoint</key>
-			<string>HGSActionsExtensionPoint</string>
-			<key>HGSExtensionIdentifier</key>
-			<string>com.yourcompany.action.iTunesNotifier</string>
-			<key>HGSActionDirectObjectTypes</key>
-			<array>
-				<string>*</string>
-			</array>
-			<key>HGSExtensionUserVisibleName</key>
-			<string>iTunesNotifier Action</string>
-			<key>HGSExtensionIconImagePath</key>
-			<string></string>
+			<string>iTunesNotifier Service</string>
 		</dict>
 	</array>
 </dict>

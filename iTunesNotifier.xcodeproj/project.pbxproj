@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F38DCE40F6864D90051B7E3 /* iTunesNotifierSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F38DCE00F6864D90051B7E3 /* iTunesNotifierSource.m */; };
-		7F38DCE50F6864D90051B7E3 /* iTunesNotifierAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F38DCE20F6864D90051B7E3 /* iTunesNotifierAction.m */; };
+		7F38DCE50F6864D90051B7E3 /* iTunesNotifierService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F38DCE20F6864D90051B7E3 /* iTunesNotifierService.m */; };
 		7F38DD3B0F68694B0051B7E3 /* Vermilion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F38DD3A0F68694B0051B7E3 /* Vermilion.framework */; };
 		7F38DE690F688CC20051B7E3 /* GTM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F38DE680F688CC20051B7E3 /* GTM.framework */; };
 		7F80FC720F696C5B00228142 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F80FC710F696C5B00228142 /* Cocoa.framework */; };
@@ -16,8 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7F38DCE00F6864D90051B7E3 /* iTunesNotifierSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesNotifierSource.m; sourceTree = "<group>"; };
-		7F38DCE20F6864D90051B7E3 /* iTunesNotifierAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesNotifierAction.m; sourceTree = "<group>"; };
+		7F38DCE20F6864D90051B7E3 /* iTunesNotifierService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesNotifierService.m; sourceTree = "<group>"; };
 		7F38DCE90F6865290051B7E3 /* iTunesNotifier_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunesNotifier_Prefix.pch; sourceTree = "<group>"; };
 		7F38DD3A0F68694B0051B7E3 /* Vermilion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Vermilion.framework; sourceTree = QSBBUILDROOT; };
 		7F38DE680F688CC20051B7E3 /* GTM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GTM.framework; sourceTree = QSBBUILDROOT; };
@@ -77,8 +75,7 @@
 		08FB77AFFE84173DC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7F38DCE00F6864D90051B7E3 /* iTunesNotifierSource.m */,
-				7F38DCE20F6864D90051B7E3 /* iTunesNotifierAction.m */,
+				7F38DCE20F6864D90051B7E3 /* iTunesNotifierService.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -166,8 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F38DCE40F6864D90051B7E3 /* iTunesNotifierSource.m in Sources */,
-				7F38DCE50F6864D90051B7E3 /* iTunesNotifierAction.m in Sources */,
+				7F38DCE50F6864D90051B7E3 /* iTunesNotifierService.m in Sources */,
 				8B0D217E0F796E1C00FD4A12 /* HGSBundle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +205,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7F8450F40F6B1F7B000CD5C1 /* QSBDebug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 			};
 			name = Debug;
 		};
@@ -216,6 +213,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7F8450F50F6B1F7B000CD5C1 /* QSBRelease.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 			};
 			name = Release;
 		};
