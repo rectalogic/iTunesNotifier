@@ -1,0 +1,14 @@
+//
+//  iTunesNotifier_Prefix.pch
+//  iTunesNotifier
+//
+//  Created by Andrew Wason on 9/12/09.
+//  Copyright __MyCompanyName__ 2009. All rights reserved.
+//
+
+
+#ifdef __OBJC__
+  #import <Cocoa/Cocoa.h>
+  #import <Vermilion/Vermilion.h>
+  #import <GTM/GTMDefines.h>
+#endif
