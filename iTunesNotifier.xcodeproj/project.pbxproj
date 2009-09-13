@@ -13,6 +13,7 @@
 		7F80FC720F696C5B00228142 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F80FC710F696C5B00228142 /* Cocoa.framework */; };
 		8B0D217E0F796E1C00FD4A12 /* HGSBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D217D0F796E1C00FD4A12 /* HGSBundle.m */; };
 		C2923721105C7C0C008365F0 /* iTunesGetArtwork.applescript in Sources */ = {isa = PBXBuildFile; fileRef = C2923720105C7C0C008365F0 /* iTunesGetArtwork.applescript */; };
+		C2923822105C8EAE008365F0 /* README in Resources */ = {isa = PBXBuildFile; fileRef = C2923821105C8EAE008365F0 /* README */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,11 +25,11 @@
 		7F8450F40F6B1F7B000CD5C1 /* QSBDebug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSBDebug.xcconfig; path = QSB/xcconfig/QSBDebug.xcconfig; sourceTree = QSBSRCROOT; };
 		7F8450F50F6B1F7B000CD5C1 /* QSBRelease.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSBRelease.xcconfig; path = QSB/xcconfig/QSBRelease.xcconfig; sourceTree = QSBSRCROOT; };
 		8B0D217D0F796E1C00FD4A12 /* HGSBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HGSBundle.m; path = ../Vermilion/Vermilion/HGSBundle.m; sourceTree = QSBSRCROOT; };
-		8B0D21FB0F7970DE00FD4A12 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		8BAA94490F7A6EBC00DF4F12 /* LoadableBundle.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = LoadableBundle.xcconfig; path = "externals/google-toolbox-for-mac/XcodeConfig/Target/LoadableBundle.xcconfig"; sourceTree = QSBSRCROOT; };
 		8D5B49B6048680CD000E48DA /* iTunesNotifier.hgs */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesNotifier.hgs; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2923720105C7C0C008365F0 /* iTunesGetArtwork.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; path = iTunesGetArtwork.applescript; sourceTree = "<group>"; };
+		C2923821105C8EAE008365F0 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +49,7 @@
 		089C166AFE841209C02AAC07 /* iTunesNotifier */ = {
 			isa = PBXGroup;
 			children = (
-				8B0D21FB0F7970DE00FD4A12 /* README.txt */,
+				C2923821105C8EAE008365F0 /* README */,
 				08FB77AFFE84173DC02AAC07 /* Source */,
 				32C88E010371C26100C91783 /* Other Sources */,
 				089C167CFE841241C02AAC07 /* Resources */,
@@ -156,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2923822105C8EAE008365F0 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +212,8 @@
 			baseConfigurationReference = 7F8450F40F6B1F7B000CD5C1 /* QSBDebug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CURRENT_PROJECT_VERSION = 1.0;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 			};
 			name = Debug;
 		};
@@ -218,6 +222,8 @@
 			baseConfigurationReference = 7F8450F50F6B1F7B000CD5C1 /* QSBRelease.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CURRENT_PROJECT_VERSION = 1.0;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 			};
 			name = Release;
 		};
