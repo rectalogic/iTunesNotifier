@@ -62,7 +62,10 @@ static NSString *const kiTunesPlayerInfoNotification = @"com.apple.iTunes.player
                     forKey:kHGSSummaryMessageKey];
     [messageDict setObject:[self getTrackArtwork]
                     forKey:kHGSImageMessageKey];
-    [messageDict setObject:[notificationInfo objectForKey:@"Name"]
+    NSString *msg = [NSString stringWithFormat:@"%@ - %@",
+                     [notificationInfo objectForKey:@"Name"],
+                     [notificationInfo objectForKey:@"Album"]];
+    [messageDict setObject:msg
                     forKey:kHGSDescriptionMessageKey];
     
     [[NSNotificationCenter defaultCenter]
