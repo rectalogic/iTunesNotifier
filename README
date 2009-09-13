@@ -1,3 +1,14 @@
+This is a plugin for Google QSB (Quick Search Box) for Mac.
+http://code.google.com/p/qsb-mac/
+
+Build iTunesNotifier.hgs and copy to:
+~/Library/Application\ Support/Google/Quick\ Search\ Box/PlugIns/
+
+Any time iTunes plays a new track, QSB will notify you - using Growl
+if you have QSB Growl notifications configured.
+
+=================
+
 This template builds a basic Objective-C plugin for Quick Search Box.
 
 It requires that you set up two source trees in Xcode to compile. You will have 
