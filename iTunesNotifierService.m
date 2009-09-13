@@ -6,10 +6,9 @@
 //
 
 #import <Vermilion/Vermilion.h>
+#import <GTM/GTMNSAppleScript+Handler.h>
 
 static NSString *const kiTunesPlayerInfoNotification = @"com.apple.iTunes.playerInfo";
-static NSString *const kiTunesAppBundleID = @"com.apple.iTunes";
-static NSString *const kiTunesScriptResult = @"kiTunesScriptResult";
 
 @interface iTunesNotifierService : HGSExtension {
     NSAppleScript *script;
@@ -17,7 +16,6 @@ static NSString *const kiTunesScriptResult = @"kiTunesScriptResult";
 
 - (void)iTunesPlayerInfoNotification:(NSNotification *)notification;
 - (NSImage *)getTrackArtwork;
-- (void)executeScript:(NSMutableDictionary *)results;
 @end
 
 
@@ -74,23 +72,17 @@ static NSString *const kiTunesScriptResult = @"kiTunesScriptResult";
 }
 
 - (NSImage *)getTrackArtwork {
-    NSImage *artwork = nil;
-    NSMutableDictionary *results = [NSMutableDictionary dictionary];
-    [self performSelectorOnMainThread:@selector(executeScript:)
-                           withObject:results
-                        waitUntilDone:YES];
-    NSAppleEventDescriptor *scriptResult = [results objectForKey:kiTunesScriptResult];
-    if (scriptResult)
-        artwork = [[[NSImage alloc] initWithData:[scriptResult data]] autorelease];
-    return artwork;
-}
-
-- (void)executeScript:(NSMutableDictionary *)results {
     NSDictionary *error = nil;
-    NSAppleEventDescriptor *scriptResult = [script executeAndReturnError:&error];
+    NSAppleEventDescriptor *result =
+        [script gtm_executePositionalHandler:@"getTrackArtwork"
+                                  parameters:nil
+                                       error:&error];
+    NSImage *artwork = nil;
     if (error)
         HGSLog(@"iTunes script failed %@", [error description]);
-    [results setObject:scriptResult forKey:kiTunesScriptResult];
+    else
+        artwork = [[[NSImage alloc] initWithData:[result data]] autorelease];
+    return artwork;
 }
 
 @end
